@@ -1,0 +1,113 @@
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+
+
+.remove-ip{
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+
+.ip{
+  margin-top: 10px;
+}
+
+table{
+  margin: 40px auto;
+  border-spacing: 24px;
+}
+
+.btn-wrapper{
+  text-align: center;
+}
+
+input, textarea{
+  display: block;
+  width: 90%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+button{
+  margin-right: 12px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid #2e6da4;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  background-color: #337ab7;
+  &:disabled{
+    opacity: 0.5;
+  }
+  &.success{
+    border-color: #5cb85c;
+    background-color: #5cb85c;
+  }
+  &.reset{
+    border-color: #d9534f;
+    background-color: #d9534f;
+  }
+}
+
+
+textarea{
+  min-height: 109px;
+}
+
+tr{
+  vertical-align: top;
+}
+h4{
+  text-align: center;
+}
+
+  .result-box{
+    min-width: 120px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid lightgray;
+    padding: 30px;
+    width: max-content;
+    border-radius: 10px;
+  }

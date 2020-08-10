@@ -1,0 +1,48 @@
+<div>
+  <div>
+    <form [formGroup]="form" autocomplete="off" (ngSubmit)="joinWords()">
+
+      <table>
+        <thead>
+        <tr>
+          <th>IP address</th>
+          <th>Second word</th>
+          <th>Last word</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+                <textarea type="text" required
+                          formControlName="ips" ></textarea>
+            </td>
+            <td>
+              <input type="text" required
+                     formControlName="second" />
+            </td>
+            <td>
+              <input type="text" required
+                     formControlName="last" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="btn-wrapper">
+        <button class="btn" (click)="joinWords()" >Valider</button>
+        <button class="btn success" (click)="copy()" [disabled]="!ipsToShow || ipsToShow.length === 0">Copier</button>
+        <button class="btn success" (click)="downloadFile()" [disabled]="!ipsToShow || ipsToShow.length === 0">Télécharger</button>
+        <button class="btn reset" (click)="reset()" >Réinitialiser</button>
+      </div>
+    </form>
+  </div>
+
+  <h4 *ngIf="ipsToShow?.length > 0">Résultat</h4>
+  <div *ngIf="ipsToShow?.length > 0" class="result-box" #result>
+    <div *ngFor="let ip of ipsToShow; let i = index" >
+      <span>{{ip}}</span>
+      <span *ngIf="second?.trim()">,{{second.trim()}}{{i+1}}</span>
+      <span *ngIf="last?.trim()">,{{last.trim()}}</span>
+    </div>
+  </div>
+</div>
